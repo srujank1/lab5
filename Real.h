@@ -5,10 +5,14 @@
 class Real: public Literal
 {
     public:
-        Real();
-        virtual ~Real();
-    protected:
-    private:
+        Real():Literal <double> (0.0){
+            
+        }
+        void print()
+        {
+            
+        }
+   
 
 };
 
