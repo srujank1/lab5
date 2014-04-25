@@ -5,10 +5,15 @@
 class String: public Literal
 {
     public:
-        String();
-        virtual ~String();
-    protected:
-    private:
+        String():literal<string> ("")
+        {
+            
+        }
+        void print()
+        {
+            
+        }
+   
 };
 
 #endif // STRING_H
