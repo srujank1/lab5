@@ -1,5 +1,6 @@
 #ifndef LITERAL_H
 #define LITERAL_H
+
 template < typename T>
 
 class Literal : public Token{
@@ -7,10 +8,22 @@ class Literal : public Token{
     private: 
         T literal; 
     public:
-        Literal(T lit);
-        ~Literal();
-        void setLiteral(T lit);
-        T getLit();
+        Literal(T lit)
+        {
+            setLiteral(T); 
+        }
+        ~Literal()
+        {
+            
+        }
+        void setLiteral(T lit)
+        {
+            literal = lit; 
+        }
+        T getLit()
+        {
+            return literal; 
+        }
         
         vritual void print()=0; 
     
