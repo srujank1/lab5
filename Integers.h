@@ -4,11 +4,14 @@
 
 class Integers: public Literal
 {
-    public:
-        Integers();
-        virtual ~Integers();
-    protected:
-    private:
+   public:
+        Intergers():Literal <int> (0){
+            
+        }
+        void print()
+        {
+            
+        }
 };
 
 #endif // INTEGERS_H

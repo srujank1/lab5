@@ -1,14 +1,32 @@
 #ifndef LITERAL_H
 #define LITERAL_H
 
+template < typename T>
 
-class Literal
+class Literal : public Token{
 {
+    private: 
+        T literal; 
     public:
-        Literal();
-        virtual ~Literal();
-    protected:
-    private:
+        Literal(T lit)
+        {
+            setLiteral(T); 
+        }
+        ~Literal()
+        {
+            
+        }
+        void setLiteral(T lit)
+        {
+            literal = lit; 
+        }
+        T getLit()
+        {
+            return literal; 
+        }
+        
+        vritual void print()=0; 
+    
 };
 
 #endif // LITERAL_H
