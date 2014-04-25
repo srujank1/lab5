@@ -1,16 +1,19 @@
 #ifndef IDENTIFIER_H
 #define IDENTIFIER_H
 
+#include <strings>
 
-class Identifier
+
+class Identifier:public Token
 {
     public:
         Identifier();
         virtual ~Identifier();
-        virtual void setIdentifier();
-        virtual getIdentifier();
+        void setIdentifier(string thing);
+        string getIdentifier();
     protected:
     private:
+        string id;
 };
 
 #endif // IDENTIFIER_H

@@ -17,14 +17,14 @@ IdentifierBinaryTree::IdentifierBinaryTree()
 }
 IdentifierBinaryTree::~IdentifierBinaryTree()
 {
-    Token *root = getTreeRoot();
-    
+    Identifier *root = getTreeRoot();
+
     if (root != NULL)
     {
         depthFirstDeleteTree(root);
     }
 }
-void IdentifierBinaryTree::depthFirstDeleteTree(Token *tok)
+void IdentifierBinaryTree::depthFirstDeleteTree(Identifier *tok)
 {
     if (tok->getLeftChild() != NULL)
     {
@@ -37,19 +37,19 @@ void IdentifierBinaryTree::depthFirstDeleteTree(Token *tok)
     }
     delete tok;
 }
-void IdentifierBinaryTree::setTreeRoot(Token *root)
+void IdentifierBinaryTree::setTreeRoot(Identifier *root)
 {
     this->treeRoot = root;
 }
-Token *IdentifierBinaryTree::getTreeRoot()
+Identifier *IdentifierBinaryTree::getTreeRoot()
 {
     return this->treeRoot;
 }
-bool IdentifierBinaryTree::addIdentifier(Token *tok, int lineNum)
+bool IdentifierBinaryTree::addIdentifier(Identifier *id, int lineNum)
 {
     bool success = false;
     LineNumberList *listItem = new LineNumberList();
-    
+
     listItem->setLineNumber(lineNum);
     if (getTreeRoot() == NULL)
     {
@@ -63,7 +63,7 @@ bool IdentifierBinaryTree::addIdentifier(Token *tok, int lineNum)
         Token *parentNode = getTreeRoot();
         string treeNodeName;
         int stringComparison;
-        
+
         while (parentNode != NULL)
         {
             treeNodeName = parentNode->getTokenString();

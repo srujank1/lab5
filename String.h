@@ -2,7 +2,7 @@
 #define STRING_H
 
 
-class String: public Identifier
+class String: public Literal
 {
     public:
         String();

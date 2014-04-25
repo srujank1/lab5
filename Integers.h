@@ -2,7 +2,7 @@
 #define INTEGERS_H
 
 
-class Integers: public Identifier
+class Integers: public Literal
 {
     public:
         Integers();

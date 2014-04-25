@@ -9,3 +9,11 @@ Identifier::~Identifier()
 {
     //dtor
 }
+
+string Identifier::getIdentifier(){
+    return this->id;
+}
+
+void Identifier::setIdentifier(string thing){
+    this->id=thing;
+}
