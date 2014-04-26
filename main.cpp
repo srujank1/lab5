@@ -11,6 +11,7 @@
 #include "Scanner.h"
 #include "Token.h"
 #include "IdentifierBinaryTree.h"
+#include "Identifier.h"
 
 FILE *init_lister(const char *name, char source_file_name[], char dte[]);
 void quit_scanner(FILE *src_file, Token *list);
@@ -25,7 +26,7 @@ int main(int argc, const char * argv[])
     Print print(source_name, date);
     Scanner scanner(source_file, source_name, date, print);
     IdentifierBinaryTree tree;
-    
+
     do
     {
         token = scanner.getToken();
@@ -40,7 +41,7 @@ int main(int argc, const char * argv[])
         }
     }
     while (token->getCode() != PERIOD && token->getCode() != END_OF_FILE);
-    
+
     print.printTree(tree.getTreeRoot());
     delete token;
     fclose(source_file);
@@ -50,7 +51,7 @@ FILE *init_lister(const char *name, char source_file_name[], char dte[])
 {
     time_t timer;
     FILE *file;
-    
+
     strcpy(source_file_name, name);
     file = fopen(source_file_name, "r");
     time(&timer);

@@ -2,18 +2,33 @@
 
 Identifier::Identifier()
 {
-    //ctor
+    setLeftChild(NULL);
+    setRightChild(NULL);
+    list = NULL;
 }
 
 Identifier::~Identifier()
 {
-    //dtor
+    //What code do I need here to free memory
+    LineNumberList *root = getLineNumberList();
+    LineNumberList *tmp = root;
+
+    while (root != NULL)
+    {
+        tmp = tmp->getNextLineNumber();
+        delete root;
+        root = tmp;
+    }
+    if (this->getType() == STRING_LIT)
+    {
+        free(this->literal.stringLiteral);
+    }
 }
 
-string Identifier::getIdentifier(){
+char* Identifier::getIdentifier(){
     return this->id;
 }
 
-void Identifier::setIdentifier(string thing){
+void Identifier::setIdentifier(char* thing){
     this->id=thing;
 }

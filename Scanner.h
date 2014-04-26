@@ -11,6 +11,7 @@
 #include "common.h"
 #include "Token.h"
 #include "Print.h"
+#include "Identifier.h"
 
 #define CHAR_TABLE_SIZE 256
 
@@ -35,7 +36,7 @@ private:
     char source_line[MAX_SOURCE_LINE_LENGTH];
     char *line_ptr = NULL;
     int line_number;
-    
+
     bool getSourceLine(char source_buffer[]);
     char getChar(char source_buffer[]);
     void skipBlanks(char source_buffer[]);
@@ -46,7 +47,7 @@ private:
     void getSpecial(char *str, char *token_ptr, Token *tok);
     void downshiftWord(char word[]);
     bool isReservedWord(char *str, Token *tok);
-    
+
 public:
     Scanner(FILE *source_file, char source_name[], char date[], Print printer);
     ~Scanner();
