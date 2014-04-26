@@ -22,14 +22,14 @@ class Token
 {
 private:
     TokenCode code;
-    #LiteralType type;
+    /*#LiteralType type;
     #union
     #{
     #    int integer;
     #    float real;
     #    char *stringLiteral;
     #}
-    #literal;
+    #literal;*/
     string tokenString;
     //What variables and methods am I missing to implement a binary tree.
     Token *leftChild;
