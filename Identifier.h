@@ -1,6 +1,8 @@
 #ifndef IDENTIFIER_H
 #define IDENTIFIER_H
-class Token;
+//class Token;
+#include "Token.h"
+
 
 class Identifier:public Token
 {
