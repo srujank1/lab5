@@ -63,7 +63,7 @@ void Print::printPageHeader()
     putchar(FORM_FEED_CHAR);
     printf("Page    %d  %s  %s\n\n", ++pageNumber, sourceFileName.c_str(), currentDate.c_str());
 }
-void Print::printToken(Identifier *token)
+void Print::printToken(Token *token)
 {
     char line[MAX_SOURCE_LINE_LENGTH + 32];
     const char *symbol_string = SYMBOL_STRINGS[token->getCode()];
