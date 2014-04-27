@@ -38,8 +38,6 @@ private:
 
 public:
 
-    Token *leftChild;
-    Token *rightChild;
     LineNumberList *list;
     
     Token();
