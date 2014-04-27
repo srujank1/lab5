@@ -10,9 +10,9 @@
 Token::Token()
 {
     //What code do I need here to initialize everything.
-    setLeftChild(NULL);
-    setRightChild(NULL);
-    list = NULL;
+    //setLeftChild(NULL);
+    //setRightChild(NULL);
+    //list = NULL;
 }
 Token::~Token()
 {
