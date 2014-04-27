@@ -3,30 +3,30 @@
 
 template < typename T>
 
-class Literal : public Token{
+class Literal : public Token
 {
-    private: 
-        T literal; 
+    private:
+        T literal;
     public:
         Literal(T lit)
         {
-            setLiteral(T); 
+            setLiteral(T);
         }
         ~Literal()
         {
-            
+
         }
         void setLiteral(T lit)
         {
-            literal = lit; 
+            literal = lit;
         }
         T getLit()
         {
-            return literal; 
+            return literal;
         }
-        
-        vritual void print()=0; 
-    
+
+        virtual void print()=0;
+
 };
 
 #endif // LITERAL_H
