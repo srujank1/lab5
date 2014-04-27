@@ -32,11 +32,16 @@ private:
     #literal;*/
     string tokenString;
     //What variables and methods am I missing to implement a binary tree.
+    //Token *leftChild;
+    //Token *rightChild;
+    //LineNumberList *list;
+
+public:
+
     Token *leftChild;
     Token *rightChild;
     LineNumberList *list;
-
-public:
+    
     Token();
     ~Token();
     void setCode(TokenCode newCode);
