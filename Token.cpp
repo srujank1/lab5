@@ -81,22 +81,7 @@ string Token::getTokenString()
     return this->tokenString;
 }
 //What methods am I missing to implement a binary tree.
-void Token::setLeftChild(Token *tok)
-{
-    this->leftChild = tok;
-}
-Token *Token::getLeftChild()
-{
-    return this->leftChild;
-}
-void Token::setRightChild(Token *tok)
-{
-    this->rightChild = tok;
-}
-Token *Token::getRightChild()
-{
-    return this->rightChild;
-}
+
 void Token::addToLineNumberList(LineNumberList *listItem)
 {
     LineNumberList *tmp = getLineNumberList();
