@@ -10,7 +10,7 @@ class Literal : public Token
     public:
         Literal(T lit)
         {
-            setLiteral(T);
+            setLiteral(lit);
         }
         ~Literal()
         {
