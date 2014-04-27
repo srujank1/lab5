@@ -1,16 +1,19 @@
 #ifndef IDENTIFIER_H
 #define IDENTIFIER_H
-//class Token;
 #include "Token.h"
-
 
 class Identifier:public Token
 {
     public:
         Identifier();
         virtual ~Identifier();
-        void Identifier::setIdentifier(string thing);
-        char* Identifier::getIdentifier();
+        void setIdentifier(char* thing);
+        char* getIdentifier();
+        void setLeftChild(Token *tok);
+        Token *getLeftChild();
+        void setRightChild(Token *tok);
+        Token *getRightChild();
+
     protected:
     private:
         char* id;
