@@ -7,6 +7,11 @@
 
 #include "Scanner.h"
 #include "Print.h"
+#include "Literal.h"
+#include "Real.h"
+#include "String.h"
+#include "Integers.h"
+
 
 typedef struct
 {
@@ -99,13 +104,13 @@ Token* Scanner::getToken()
     switch (char_table[ch])
     {//3.  Call the appropriate function to deal with the cases in 2.
         case LETTER:
-            #getWord(token_string, token_ptr, new_token);
+            //getWord(token_string, token_ptr, new_token);
             String *newId=new Literal();
             newId.setString(token_ptr);
             new_token=newId;
             break;
         case DIGIT:
-            #getNumber(token_string, token_ptr, new_token);
+            //getNumber(token_string, token_ptr, new_token);
             Real *newId=new Literal();
             newId.setReal(token_ptr);
             break;
