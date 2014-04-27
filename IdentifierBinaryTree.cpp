@@ -53,14 +53,14 @@ bool IdentifierBinaryTree::addIdentifier(Identifier *id, int lineNum)
     listItem->setLineNumber(lineNum);
     if (getTreeRoot() == NULL)
     {
-        setTreeRoot(tok);
-        tok->addToLineNumberList(listItem);
+        setTreeRoot(id);
+        id->addToLineNumberList(listItem);
         success = true;
     }
     else
     {
-        string tokenName = tok->getTokenString();
-        Token *parentNode = getTreeRoot();
+        string tokenName = id->getTokenString();
+        Identifier *parentNode = getTreeRoot();
         string treeNodeName;
         int stringComparison;
 
@@ -73,7 +73,7 @@ bool IdentifierBinaryTree::addIdentifier(Identifier *id, int lineNum)
                 //They are the same identifier token we just need to add a new line number to the list.
                 parentNode->addToLineNumberList(listItem);
                 parentNode = NULL; //Exit the loop
-                delete tok;         //We won't need tok and it won't be deleted in main.
+                delete id;         //We won't need tok and it won't be deleted in main.
                 success = true;
             }
             else if (stringComparison < 0)
@@ -82,8 +82,8 @@ bool IdentifierBinaryTree::addIdentifier(Identifier *id, int lineNum)
                 if (parentNode->getLeftChild() == NULL)
                 {
                     //Add tok to the left
-                    tok->addToLineNumberList(listItem);
-                    parentNode->setLeftChild(tok);
+                    id->addToLineNumberList(listItem);
+                    parentNode->setLeftChild(id);
                     parentNode = NULL;
                     success = true;
                 }
@@ -98,8 +98,8 @@ bool IdentifierBinaryTree::addIdentifier(Identifier *id, int lineNum)
                 if (parentNode->getRightChild() == NULL)
                 {
                     //Add tok to the right
-                    tok->addToLineNumberList(listItem);
-                    parentNode->setRightChild(tok);
+                    id->addToLineNumberList(listItem);
+                    parentNode->setRightChild(id);
                     parentNode = NULL;
                     success = true;
                 }

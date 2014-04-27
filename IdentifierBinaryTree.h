@@ -10,7 +10,7 @@
 #define __Lab4__IdentifierBinaryTree__
 
 #include <iostream>
-#include "Token.h"
+#include "Identifier.h"
 
 class IdentifierBinaryTree
 {
