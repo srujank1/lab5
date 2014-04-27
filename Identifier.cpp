@@ -33,3 +33,19 @@ char* Identifier::getIdentifier(){
 void Identifier::setIdentifier(char* thing){
     this->id=thing;
 }
+void Identifier::setLeftChild(Token *tok)
+{
+    this->leftChild = tok;
+}
+Token *Identifier::getLeftChild()
+{
+    return this->leftChild;
+}
+void Identifier::setRightChild(Token *tok)
+{
+    this->rightChild = tok;
+}
+Token *Identifier::getRightChild()
+{
+    return this->rightChild;
+}
