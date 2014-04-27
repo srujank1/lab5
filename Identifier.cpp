@@ -20,10 +20,10 @@ Identifier::~Identifier()
         delete root;
         root = tmp;
     }
-    if (this->getType() == STRING_LIT)
-    {
-        free(this->literal.stringLiteral);
-    }
+    //if (this->getType() == STRING_LIT)
+    //{
+    //    free(this->literal.stringLiteral);
+    //}
 }
 
 char* Identifier::getIdentifier(){
@@ -33,19 +33,19 @@ char* Identifier::getIdentifier(){
 void Identifier::setIdentifier(char* thing){
     this->id=thing;
 }
-void Identifier::setLeftChild(Token *tok)
+void Identifier::setLeftChild(Identifier *tok)
 {
     this->leftChild = tok;
 }
-Token *Identifier::getLeftChild()
+Identifier *Identifier::getLeftChild()
 {
     return this->leftChild;
 }
-void Identifier::setRightChild(Token *tok)
+void Identifier::setRightChild(Identifier *tok)
 {
     this->rightChild = tok;
 }
-Token *Identifier::getRightChild()
+Identifier *Identifier::getRightChild()
 {
     return this->rightChild;
 }
