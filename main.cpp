@@ -33,7 +33,9 @@ int main(int argc, const char * argv[])
         print.printToken(token);
         if (token->getCode() == IDENTIFIER)
         {
-            tree.addIdentifier(token, scanner.getLineNumber());
+            Identifier *id=new Identifier();
+            id->setIdentifier(token->getTokenString());
+            tree.addIdentifier(id, scanner.getLineNumber());
         }
         else if (token->getCode() != PERIOD && token->getCode() != END_OF_FILE)
         {

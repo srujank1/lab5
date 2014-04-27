@@ -26,11 +26,11 @@ Identifier::~Identifier()
     //}
 }
 
-char* Identifier::getIdentifier(){
+string Identifier::getIdentifier(){
     return this->id;
 }
 
-void Identifier::setIdentifier(char* thing){
+void Identifier::setIdentifier(string thing){
     this->id=thing;
 }
 void Identifier::setLeftChild(Identifier *tok)
