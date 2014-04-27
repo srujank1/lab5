@@ -30,7 +30,7 @@ public:
     ~Print();
 
     void printLine(char line[]);
-    void printToken(Identifier *token);
+    void printToken(Token *token);
     int getLineCount();
     void printTree(Identifier *identifier);
     void printTreeRecursive(Identifier *identifier);
