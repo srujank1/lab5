@@ -56,10 +56,7 @@ public:
     string getStringLiteral();
     void setTokenString(string s);
     string getTokenString();
-    void setLeftChild(Token *tok);
-    Token *getLeftChild();
-    void setRightChild(Token *tok);
-    Token *getRightChild();
+   
     void addToLineNumberList(LineNumberList *listItem);
     LineNumberList *getLineNumberList();
 };
