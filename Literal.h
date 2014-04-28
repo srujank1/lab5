@@ -18,6 +18,14 @@ class Literal:public Token{
         void print(){
             std::cout<<literal<<std::endl;
         }
+        void setLiteral(T lit)
+        {
+            literal = lit;
+        }
+        T *getLiteral()
+        {
+            return literal;
+        }
 };
 
 #endif // LITERAL_H
