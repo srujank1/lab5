@@ -14,7 +14,14 @@ class Integers: public Literal<int>
         void print(){
             std::cout<<literal<<std::endl;
         }
-
+        void setLiteral(T lit)
+        {
+            literal = lit;
+        }
+        T *getLiteral()
+        {
+            return literal;
+        }
 };
 
 #endif // INTEGERS_H
