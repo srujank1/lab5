@@ -6,16 +6,14 @@ class Real: public Literal<double>
 {
     public:
         Real():Literal <double> (0.0){
-
+            ;
         }
         Real(double d): Literal<double>(d){
-
+            ;
         }
-        void print()
-        {
-
+        void print(){
+            std::cout<<literal<<std::endl;
         }
-
 
 };
 

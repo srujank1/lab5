@@ -6,15 +6,15 @@ class Integers: public Literal<int>
 {
    public:
         Integers():Literal <int> (0){
-
+            ;
         }
         Integers(int d): Literal<int>(d){
-
+            ;
         }
-        void print()
-        {
-
+        void print(){
+            std::cout<<literal<<std::endl;
         }
+
 };
 
 #endif // INTEGERS_H

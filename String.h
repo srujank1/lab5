@@ -1,21 +1,21 @@
 #ifndef STRING_H
 #define STRING_H
+#include <string>
 #include "Literal.h"
 
-class String: public Literal<string>
+class String: public Literal<std::string>
 {
     public:
-        String():Literal<string> ("")
-        {
-
+        String():Literal<std::string> (""){
+            ;
         }
-        String(string d): Literal<string>(d){
-
+        String(std::string d): Literal<std::string>(d){
+            ;
         }
-        void print()
-        {
-
+        void print(){
+            std::cout<<literal<<std::endl;
         }
+
 
 };
 

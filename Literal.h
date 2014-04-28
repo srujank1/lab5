@@ -1,33 +1,23 @@
 #ifndef LITERAL_H
 #define LITERAL_H
 #include "Token.h"
-
 template < typename T>
 
-class Literal : public Token
-{
-    private:
-        T literal;
+class Literal:public Token{
+
     public:
+        T literal;
         Literal(T lit)
         {
-            setLiteral(lit);
+            this->literal = lit;
         }
         ~Literal()
         {
 
         }
-        void setLiteral(T lit)
-        {
-            literal = lit;
+        void print(){
+            std::cout<<literal<<std::endl;
         }
-        T getLit()
-        {
-            return literal;
-        }
-
-        virtual void print()=0;
-
 };
 
 #endif // LITERAL_H
