@@ -3,21 +3,26 @@
 #include "Token.h"
 template < typename T>
 
-class Literal:public Token{
-
-    public:
-        T literal;
-        Literal(T lit)
-        {
-            this->literal = lit;
+class Integers: public Literal<int>
+{
+   public:
+        Integers():Literal <int> (0){
+            ;
         }
-        ~Literal()
-        {
-
+        Integers(int d): Literal<int>(d){
+            ;
         }
         void print(){
             std::cout<<literal<<std::endl;
         }
+        void setLiteral(T lit)
+        {
+            literal = lit;
+        }
+        T *getLiteral()
+        {
+            return literal;
+        }
 };
 
-#endif // LITERAL_H
+#endif // INTEGERS_H
