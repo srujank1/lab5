@@ -1,10 +1,13 @@
+//Srujan Kanteti
+//Brian Kolden
+
 #ifndef INTEGERS_H
 #define INTEGERS_H
 #include "Literal.h"
 
 class Integers: public Literal<int>
 {
-   public:
+    public:
         Integers():Literal <int> (0){
             ;
         }
@@ -14,14 +17,7 @@ class Integers: public Literal<int>
         void print(){
             std::cout<<literal<<std::endl;
         }
-        void setLiteral(T lit)
-        {
-            literal = lit;
-        }
-        T *getLiteral()
-        {
-            return literal;
-        }
+
 };
 
-#endif // INTEGERS_H
+#endif // REAL_H
