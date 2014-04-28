@@ -1,5 +1,6 @@
 #ifndef LITERAL_H
 #define LITERAL_H
+#include "Token.h"
 
 template < typename T>
 

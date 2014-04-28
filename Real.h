@@ -2,17 +2,20 @@
 #define REAL_H
 #include "Literal.h"
 
-class Real: public Literal
+class Real: public Literal<double>
 {
     public:
         Real():Literal <double> (0.0){
-            
+
+        }
+        Real(double d): Literal<double>(d){
+
         }
         void print()
         {
-            
+
         }
-   
+
 
 };
 
